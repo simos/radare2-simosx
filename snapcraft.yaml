@@ -63,3 +63,4 @@ parts:
       snapcraftctl build
     build-packages:
       - python3-pip
+      - python3-setuptools
