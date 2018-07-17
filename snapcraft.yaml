@@ -1,5 +1,5 @@
 name: radare2-simosx
-version: '2.6.0'
+version: '2.7.0'
 summary: Radare2 reverse engineering framework and tool
 description: |
   Radare2 (also known as r2) is a complete framework for reverse-engineering 
@@ -55,7 +55,7 @@ apps:
 parts:
   radare2:
     source: https://github.com/radare/radare2.git
-    source-tag: '2.6.0'
+    source-tag: '2.7.0'
     plugin: meson
     meson-parameters: [--prefix=/usr]
     override-build: |
