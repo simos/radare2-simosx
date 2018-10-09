@@ -21,6 +21,9 @@ apps:
   radare2:
     command: usr/bin/radare2
     plugs: [home]
+  r2pm:
+    command: usr/bin/r2pm
+    plugs: [home]
   r2agent:
     command: usr/bin/r2agent
     plugs: [home, network-bind]
@@ -32,9 +35,6 @@ apps:
     plugs: [home]
   rasm2:
     command: usr/bin/rasm2
-    plugs: [home]
-  sdb:
-    command: usr/bin/sdb
     plugs: [home]
   rabin2:
     command: usr/bin/rabin2
@@ -64,3 +64,10 @@ parts:
     build-packages:
       - python3-pip
       - python3-setuptools
+      - libmagic-dev
+      - pkg-config
+      - libzip-dev
+      - liblz4-dev
+      - libssl-dev
+      - libbsd-dev
+      - libcapstone-dev
