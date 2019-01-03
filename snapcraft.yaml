@@ -75,3 +75,25 @@ parts:
       - libuv1-dev
     stage-packages:
       - libuv1
+    after: [ninja, acr]
+  ninja:
+    source: https://github.com/ninja-build/ninja.git
+    source-tag: 'v1.8.2'
+    plugin: python
+    python-version: python2
+    override-build: |
+      pwd
+      python3 ./configure.py --bootstrap
+      cp ninja /usr/bin/
+      snapcraftctl build
+    build-packages:
+      - re2c
+  acr:
+    source: https://github.com/radare/acr.git
+    source-tag: '1.7.0'
+    plugin: make
+    override-build: |
+      ./configure --prefix=/usr
+      make install
+      snapcraftctl build
+    
