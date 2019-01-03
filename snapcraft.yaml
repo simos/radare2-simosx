@@ -74,4 +74,4 @@ parts:
       - cmake
       - libuv1-dev
     stage-packages:
-      -libuv1
+      - libuv1
