@@ -16,7 +16,7 @@ description: |
   When an official snap is ready, this package will get unlisted.
 
 grade: stable # must be 'stable' to release into candidate/stable channels
-confinement: strict # use 'strict' once you have the right plugs and slots
+confinement: devmode # use 'strict' once you have the right plugs and slots
 
 apps:
   radare2:
