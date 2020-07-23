@@ -1,5 +1,6 @@
 name: radare2-simosx
-version: '3.1.3'
+version: '4.1.5'
+base: core18
 summary: Radare2 reverse engineering framework and tool
 description: |
   Radare2 (also known as r2) is a complete framework for reverse-engineering 
@@ -55,7 +56,7 @@ apps:
 parts:
   radare2:
     source: https://github.com/radare/radare2.git
-    source-tag: '3.1.3'
+    source-tag: '4.1.5'
     plugin: meson
     meson-parameters: [--prefix=/usr]
     override-build: |
@@ -71,29 +72,6 @@ parts:
       - libssl-dev
       - libbsd-dev
       - libcapstone-dev
-      - cmake
       - libuv1-dev
     stage-packages:
       - libuv1
-    after: [ninja, acr]
-  ninja:
-    source: https://github.com/ninja-build/ninja.git
-    source-tag: 'v1.8.2'
-    plugin: python
-    python-version: python2
-    override-build: |
-      pwd
-      python3 ./configure.py --bootstrap
-      cp ninja /usr/bin/
-      snapcraftctl build
-    build-packages:
-      - re2c
-  acr:
-    source: https://github.com/radare/acr.git
-    source-tag: '1.7.0'
-    plugin: make
-    override-build: |
-      ./configure --prefix=/usr
-      make install
-      snapcraftctl build
-    
