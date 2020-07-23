@@ -52,6 +52,9 @@ apps:
   rax2:
     command: usr/bin/rax2
     plugs: [home]
+  rasign2:
+    command: usr/bin/rasign2
+    plugs: [home]
 
 parts:
   radare2:
