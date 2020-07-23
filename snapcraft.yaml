@@ -1,5 +1,5 @@
 name: radare2-simosx
-version: '4.1.5'
+version: '4.5.0'
 base: core18
 summary: Radare2 reverse engineering framework and tool
 description: |
@@ -56,7 +56,7 @@ apps:
 parts:
   radare2:
     source: https://github.com/radare/radare2.git
-    source-tag: '4.1.5'
+    source-tag: '4.5.0'
     plugin: meson
     meson-parameters: [--prefix=/usr]
     override-build: |
